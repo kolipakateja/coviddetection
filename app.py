@@ -3,8 +3,8 @@ from tensorflow.keras import applications
 from tensorflow.keras.models import load_model
 import numpy as np 
 import os
-new_model=load_model("C:/Users/Welcome/Desktop/test/commomModel.h5")
-vggModel=load_model("C:/Users/Welcome/Desktop/test/vggmodel.h5")
+new_model=load_model("commomModel.h5")
+vggModel=load_model("vggmodel.h5")
 
 
 from flask import Flask, redirect, url_for, request, render_template
@@ -30,7 +30,7 @@ def test_single_image(k):
 
 app = Flask(__name__)
 
-upload_folder="C:/Users/Welcome/Desktop/test/static/"
+upload_folder="static/css/"
 
 @app.route('/',methods=['GET','POST'])
 def predict():
