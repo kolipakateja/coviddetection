@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>DETECTION</title>
+  
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
+	<style>
+	div{
+	border:10px solid black;
+	}
+	</style>
+  </head>
+
+  <body class="text-center">
+  <div>
+    <form class="form-signin" method=post enctype=multipart/form-data>
+      <h1 class="h3 mb-3 font-weight-normal">Please upload your Xray image here</h1>
+	  <br>
+      <input type="file" id="file" name="file" class="form-control" required autofocus>
+	  <br>
+	  <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
+	  <br>
+	  <br>
+	  {% if image %}
+	     <img class="mb-4" src="static/{{image}}" alt="" width="120" height="120>
+	  {% endif %}
+	  <br>
+	  <br>
+	  </form>
+	</div>
+	<div>
+	  {% if prediction == "NORMAL" %}
+		 <h3 style="color:green">NORMAL</h3>
+	  {% elif prediction == "COVID" %}
+	     <h3 style="color:red">COVID</h3>
+	  {% elif prediction == "PNEUMONIA" %}
+	     <h3 style="color:blue">PNEUMONIA</h3>
+	  {% endif %}  
+	</div>
+	  
+    
+  </body>
+</html>
