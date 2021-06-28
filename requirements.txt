@@ -1,0 +1,6 @@
+tensorflow-cpu
+keras
+flask
+numpy
+matplotlib
+requests
