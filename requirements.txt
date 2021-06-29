@@ -1,6 +1,10 @@
 tensorflow-cpu
 keras
-flask
+Flask
+Jinja2
+MarkupSafe
+Werkzeug
+pandas
 numpy
 matplotlib
 requests
